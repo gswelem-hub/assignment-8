@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What's For Dinner?</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo-section">
+
+            <div class="logo">
+                <i class="fa-solid fa-utensils"></i>
+            </div>
+
+            <div class="brand-info">
+                <h1>What's For Dinner</h1>
+                <p>Your daily meal inspiration</p>
+            </div>
+
+        </div>
+
+        <div class="nav-icons">
+
+            <button class="nav-btn" id="saved-btn" title="Saved Recipes">
+                <i class="fa-solid fa-bookmark"></i>
+            </button>
+
+            <button class="nav-btn" id="history-btn" title="History">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+            </button>
+
+            <button class="nav-btn" id="settings-btn" title="Settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100?img=47" alt="Profile">
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <div class="recipe-card">
+
+            <!-- Left Side -->
+            <div class="recipe-image">
+
+                <img id="meal-image" src="" alt="Meal Image">
+
+                <!-- Rating -->
+                <div class="rating-badge">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <strong id="rating">4.8</strong>
+
+                    <span id="reviews">(234 reviews)</span>
+
+                </div>
+
+
+                <!-- Meal Information -->
+                <div class="meal-info">
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>Prep Time</span>
+
+                        <strong id="prep-time">15 min</strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-fire-burner"></i>
+
+                        <span>Cook Time</span>
+
+                        <strong id="cook-time">20 min</strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>Servings</span>
+
+                        <strong id="servings">4 people</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="recipe-content">
+
+                <!-- Recipe Header -->
+                <div class="recipe-header">
+
+                    <div class="recipe-tags">
+
+                        <span class="difficulty" id="difficulty">
+                            Easy
+                        </span>
+
+                        <span class="category" id="category">
+                            Italian
+                        </span>
+
+                    </div>
+
+
+                    <div class="title-row">
+
+                        <div class="title-info">
+
+                            <h2 id="meal-name"></h2>
+
+                            <p id="description"></p>
+
+                        </div>
+
+
+                        <div class="recipe-actions">
+
+                            <button class="action-btn" id="bookmark-btn"
+                                title="Save Recipe">
+
+                                <i class="fa-regular fa-bookmark"></i>
+
+                            </button>
+
+
+                            <button class="action-btn" id="share-btn"
+                                title="Share Recipe">
+
+                                <i class="fa-solid fa-share-nodes"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Extended Preparation Warning -->
+                <div class="time-warning" id="time-warning" hidden>
+
+                    <div class="warning-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>Extended preparation time</h4>
+
+                        <p>
+                            This recipe requires more than 45 minutes to
+                            prepare. Plan accordingly!
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tabs -->
+                <div class="tabs">
+
+                    <button class="tab active" data-tab="ingredients">
+
+                        <i class="fa-solid fa-list-ul"></i>
+
+                        Ingredients
+
+                    </button>
+
+
+                    <button class="tab" data-tab="instructions">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        Instructions
+
+                    </button>
+
+
+                    <button class="tab" data-tab="nutrition">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        Nutrition
+
+                    </button>
+
+
+                    <button class="tab" data-tab="tips">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        Chef's Tips
+
+                    </button>
+
+                </div>
+
+
+                <!-- Dynamic Tab Content -->
+                <div id="tab-content"></div>
+
+
+                <!-- Random Button -->
+                <button id="random-btn">
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    Try Another Recipe
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
+
